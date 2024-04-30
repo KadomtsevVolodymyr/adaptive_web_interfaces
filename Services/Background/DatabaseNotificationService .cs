@@ -28,7 +28,7 @@ namespace Libra.Services.Background
                     {
                         string subject = "Postgres";
                         string body = $"Data in database has been changed.";
-                        await emailSender.SendEmailAsync("popov.yarik.popov@gmail.com", subject, body);
+                        await emailSender.SendEmailAsync("volodymyr.kadomtsev@gmail.com", subject, body);
                     }
 
                     await Task.Delay(TimeSpan.FromMinutes(5), stoppingToken);

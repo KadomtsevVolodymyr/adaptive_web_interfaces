@@ -13,7 +13,7 @@ namespace Libra.Services.Background
         {
             try
             {
-                await _emailSender.SendEmailAsync("popov.yarik.popov@gmail.com", "Hello", "Hi");
+                await _emailSender.SendEmailAsync("volodymyr.kadomtsev@gmail.com", "Hello", "Hi");
                 Console.WriteLine("Email sent successfully!");
             }
             catch (Exception ex)
