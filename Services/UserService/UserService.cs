@@ -13,9 +13,9 @@ namespace Libra.Services.UserService
         private readonly List<UserData> _users = new List<UserData>{
             new UserData
             {
-                FirstName = "Yaroslav",
-                LastName = "Popov",
-                Email = "popov.yarik.popov@gmail.com",
+                FirstName = "Volodymyr",
+                LastName = "Kadomtsev",
+                Email = "volodymyr.kadomtsev@gmail.com",
                 DateOfBirth = new DateTime(2004, 4, 22),
                 HashedPassword = "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f",
                 LastLoginDate = DateTime.UtcNow,

@@ -26,8 +26,8 @@ public class RandomDataService : IRandomDataService
             using (var workbook = new XLWorkbook())
             {
                 var worksheet = workbook.Worksheets.Add("Sheet1");
-                worksheet.Cell("A1").Value = "Yaroslav";
-                worksheet.Cell("B1").Value = "Popov";
+                worksheet.Cell("A1").Value = "Volodymyr";
+                worksheet.Cell("B1").Value = "Kadomtsev";
                 workbook.SaveAs(ms);
                 return ms.ToArray();
             }
