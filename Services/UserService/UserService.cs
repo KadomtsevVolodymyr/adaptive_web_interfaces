@@ -1,6 +1,7 @@
 ﻿using Libra.Dtos;
 using Libra.Models;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
@@ -10,12 +11,13 @@ namespace Libra.Services.UserService
 {
     public class UserService : IUserService
     {
+        private readonly ILogger<UserData> _logger;
         private readonly List<UserData> _users = new List<UserData>{
             new UserData
             {
-                FirstName = "Yaroslav",
-                LastName = "Popov",
-                Email = "popov.yarik.popov@gmail.com",
+                FirstName = "Volodymyr",
+                LastName = "Kadomtsev",
+                Email = "vgolodymyr.kadomtsev@gmail.com",
                 DateOfBirth = new DateTime(2004, 4, 22),
                 HashedPassword = "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f",
                 LastLoginDate = DateTime.UtcNow,
@@ -44,10 +46,11 @@ namespace Libra.Services.UserService
         };
         private readonly IConfiguration _configuration;
         private readonly byte[] _secretKey;
-        public UserService(IConfiguration configuration)
+        public UserService(IConfiguration configuration, ILogger<UserData> logger)
         {
             _configuration = configuration;
             _secretKey = Encoding.UTF8.GetBytes(configuration.GetSection("Authentication")["Secret"]);
+            _logger = logger;
         }
 
 
@@ -85,6 +88,7 @@ namespace Libra.Services.UserService
             {
                 return null;
             }
+            _logger.LogInformation("User {Name} logged in at {Time}", user.Email, DateTime.Now);
             return GenerateToken(user);
         }
 
