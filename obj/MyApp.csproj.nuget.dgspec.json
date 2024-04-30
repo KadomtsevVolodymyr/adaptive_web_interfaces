@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\University\\Adaptive Web\\Proj\\MyApp\\MyApp.csproj": {}
+    "/Users/volodymyrkadomtsev/Libra/MyApp.csproj": {}
   },
   "projects": {
-    "D:\\University\\Adaptive Web\\Proj\\MyApp\\MyApp.csproj": {
+    "/Users/volodymyrkadomtsev/Libra/MyApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\Adaptive Web\\Proj\\MyApp\\MyApp.csproj",
+        "projectUniqueName": "/Users/volodymyrkadomtsev/Libra/MyApp.csproj",
         "projectName": "MyApp",
-        "projectPath": "D:\\University\\Adaptive Web\\Proj\\MyApp\\MyApp.csproj",
-        "packagesPath": "C:\\Users\\Clemson\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\Adaptive Web\\Proj\\MyApp\\obj\\",
+        "projectPath": "/Users/volodymyrkadomtsev/Libra/MyApp.csproj",
+        "packagesPath": "/Users/volodymyrkadomtsev/.nuget/packages/",
+        "outputPath": "/Users/volodymyrkadomtsev/Libra/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Clemson\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/volodymyrkadomtsev/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -42,7 +45,7 @@
           "dependencies": {
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
@@ -64,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
